@@ -16,6 +16,9 @@ public class Blockbuster {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Inicio1 inicio=new Inicio1();
+        inicio.setVisible(true);
+        
     }
     
 }
