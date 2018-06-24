@@ -57,7 +57,7 @@ public class Inicio1 extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botonCatalogo);
-        botonCatalogo.setBounds(270, 280, 120, 50);
+        botonCatalogo.setBounds(260, 350, 120, 50);
 
         botonAlquilar.setBackground(new java.awt.Color(255, 102, 102));
         botonAlquilar.setFont(new java.awt.Font("Gadugi", 0, 24)); // NOI18N
@@ -66,8 +66,13 @@ public class Inicio1 extends javax.swing.JFrame {
         botonAlquilar.setBorderPainted(false);
         botonAlquilar.setFocusPainted(false);
         botonAlquilar.setFocusable(false);
+        botonAlquilar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAlquilarActionPerformed(evt);
+            }
+        });
         jPanel1.add(botonAlquilar);
-        botonAlquilar.setBounds(100, 280, 120, 50);
+        botonAlquilar.setBounds(90, 350, 120, 50);
 
         botonSalir.setBackground(new java.awt.Color(255, 102, 102));
         botonSalir.setFont(new java.awt.Font("Gadugi", 0, 24)); // NOI18N
@@ -82,7 +87,7 @@ public class Inicio1 extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botonSalir);
-        botonSalir.setBounds(270, 380, 120, 50);
+        botonSalir.setBounds(260, 450, 120, 50);
 
         botonCliente.setBackground(new java.awt.Color(255, 102, 102));
         botonCliente.setFont(new java.awt.Font("Gadugi", 0, 24)); // NOI18N
@@ -97,7 +102,7 @@ public class Inicio1 extends javax.swing.JFrame {
             }
         });
         jPanel1.add(botonCliente);
-        botonCliente.setBounds(100, 380, 120, 50);
+        botonCliente.setBounds(90, 450, 120, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logonegro.png"))); // NOI18N
         jPanel1.add(jLabel1);
@@ -123,6 +128,9 @@ public class Inicio1 extends javax.swing.JFrame {
 
     private void botonCatalogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCatalogoActionPerformed
         // TODO add your handling code here:
+        Catalogo catalogo=new Catalogo();
+        catalogo.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botonCatalogoActionPerformed
 
     private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
@@ -131,7 +139,17 @@ public class Inicio1 extends javax.swing.JFrame {
 
     private void botonClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonClienteActionPerformed
         // TODO add your handling code here:
+        Clientes clientes=new Clientes();
+        clientes.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_botonClienteActionPerformed
+
+    private void botonAlquilarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAlquilarActionPerformed
+        // TODO add your handling code here:
+       Alquilar alquilar=new Alquilar();
+       alquilar.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_botonAlquilarActionPerformed
 
     /**
      * @param args the command line arguments
