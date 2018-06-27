@@ -34,11 +34,14 @@ public class Catalogo extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jButton4 = new javax.swing.JButton();
+        ComboRating = new javax.swing.JComboBox<>();
+        ComboGenero = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -46,55 +49,100 @@ public class Catalogo extends javax.swing.JFrame {
         jMenu4 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(900, 500));
-        setMinimumSize(new java.awt.Dimension(900, 500));
-        setPreferredSize(new java.awt.Dimension(900, 500));
+        setMaximumSize(new java.awt.Dimension(900, 521));
+        setMinimumSize(new java.awt.Dimension(900, 521));
         setResizable(false);
 
         jPanel1.setMaximumSize(new java.awt.Dimension(900, 500));
         jPanel1.setMinimumSize(new java.awt.Dimension(900, 500));
         jPanel1.setLayout(null);
 
-        jLabel2.setText("Ingrese la pelicula que desea buscar:");
+        jLabel2.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Ingrese la pelicula:");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(50, 30, 210, 20);
+        jLabel2.setBounds(50, 20, 210, 40);
 
+        jTextField1.setFont(new java.awt.Font("Gadugi", 0, 12)); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(250, 30, 170, 20);
+        jTextField1.setBounds(290, 30, 170, 22);
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
+        jList1.setFont(new java.awt.Font("Gadugi", 0, 14)); // NOI18N
         jScrollPane1.setViewportView(jList1);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(50, 70, 370, 130);
-
-        jButton1.setText("jButton1");
-        jPanel1.add(jButton1);
-        jButton1.setBounds(260, 250, 73, 30);
-
-        jButton2.setText("jButton1");
-        jPanel1.add(jButton2);
-        jButton2.setBounds(50, 250, 73, 30);
-
-        jButton3.setText("jButton1");
-        jPanel1.add(jButton3);
-        jButton3.setBounds(150, 250, 73, 30);
+        jScrollPane1.setBounds(50, 230, 390, 130);
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Gadugi", 0, 14)); // NOI18N
         jTextArea1.setRows(5);
         jScrollPane2.setViewportView(jTextArea1);
 
         jPanel1.add(jScrollPane2);
-        jScrollPane2.setBounds(540, 60, 300, 140);
+        jScrollPane2.setBounds(510, 40, 320, 340);
+
+        jButton4.setBackground(new java.awt.Color(206, 53, 53));
+        jButton4.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("Buscar");
+        jButton4.setBorder(null);
+        jButton4.setFocusPainted(false);
+        jButton4.setFocusable(false);
+        jPanel1.add(jButton4);
+        jButton4.setBounds(50, 150, 100, 40);
+
+        ComboRating.setFont(new java.awt.Font("Gadugi", 0, 11)); // NOI18N
+        ComboRating.setMaximumRowCount(3);
+        ComboRating.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "RATING", "1", "2", "3", "4", "5" }));
+        ComboRating.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboRatingActionPerformed(evt);
+            }
+        });
+        jPanel1.add(ComboRating);
+        ComboRating.setBounds(256, 90, 110, 30);
+
+        ComboGenero.setFont(new java.awt.Font("Gadugi", 0, 11)); // NOI18N
+        ComboGenero.setMaximumRowCount(3);
+        ComboGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "GENERO", "Terror", "Comedia", "Romance", "Ciencia Ficcion", "Infantil" }));
+        jPanel1.add(ComboGenero);
+        ComboGenero.setBounds(50, 90, 110, 30);
+
+        jButton1.setBackground(new java.awt.Color(206, 53, 53));
+        jButton1.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Modificar");
+        jButton1.setBorder(null);
+        jButton1.setFocusPainted(false);
+        jButton1.setFocusable(false);
+        jPanel1.add(jButton1);
+        jButton1.setBounds(520, 410, 130, 40);
+
+        jButton3.setBackground(new java.awt.Color(206, 53, 53));
+        jButton3.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("Eliminar");
+        jButton3.setBorder(null);
+        jButton3.setFocusPainted(false);
+        jButton3.setFocusable(false);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3);
+        jButton3.setBounds(693, 410, 130, 40);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/fondoRojo.jpg"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(0, -80, 970, 590);
+
+        jMenuBar1.setFont(new java.awt.Font("Gadugi", 0, 12)); // NOI18N
 
         jMenu1.setText("volver");
         jMenuBar1.add(jMenu1);
@@ -128,14 +176,25 @@ public class Catalogo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void ComboRatingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboRatingActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComboRatingActionPerformed
+
     /**
      * @param args the command line arguments
      */
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> ComboGenero;
+    private javax.swing.JComboBox<String> ComboRating;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JList<String> jList1;
     private javax.swing.JMenu jMenu1;
